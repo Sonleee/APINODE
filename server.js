@@ -18,10 +18,10 @@ app.use(express.json());
 // Rotas publicas
 app.use('/api', authRoutes);
 // Rotas protegidas
-app.use('/categorias', authMiddleware, categoriaRoutes);
-app.use('/produtos', authMiddleware, produtoRoutes);
-app.use('/clientes', authMiddleware, clienteRoutes);
-app.use('/vendas', authMiddleware, vendaRoutes);
+app.use('/categoria', authMiddleware, categoriaRoutes);
+app.use('/produto', authMiddleware, produtoRoutes);
+app.use('/cliente', authMiddleware, clienteRoutes);
+app.use('/venda', authMiddleware, vendaRoutes);
 
 // Conexão MongoDB
 mongoose.connect(process.env.MONGO_URI, {
